@@ -170,6 +170,12 @@ body{
     background-color: var(--body-color);
     color: var(--text-color);
 }
+.profile__description{
+    font-size: 13px;
+}
+body > main{
+    height: 1260px;
+}
 h1,h2,h3,ul,p{
     margin: 0;
 }
@@ -190,7 +196,7 @@ img{
 }
 /*========== CLASS CSS ==========*/
 .section{
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 .section-title{
     font-size: var(--h2-font-size);
@@ -321,6 +327,10 @@ img{
 .home__icon{
     font-size: 1.2rem;
     margin-right: 0.25rem;
+}
+.home__address >a{
+    color: var(--text-color);
+    font-weight: 500;
 }
 .home__button-movil{    
     display: inline-block;
