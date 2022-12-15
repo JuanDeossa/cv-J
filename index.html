@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">   -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Juan Deossa Frontend Dev</title>
+    <link
+      rel="shortcut icon"
+      href="data:image/png;base64,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"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav__logo">Nav</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>Profile
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__link">
+                <i class="bx bx-book nav__icon"></i>Education
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="bx bx-receipt nav__icon"></i>Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#experience" class="nav__link active-link">
+                <i class="bx bx-briefcase-alt nav__icon"></i>Experience
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#certificates" class="nav__link">
+                <i class="bx bx-award nav__icon"></i>Certificates
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#references" class="nav__link">
+                <i class="bx bx-link-external nav__icon"></i>References
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main bd-container">
+      <div class="resume" id="area-cv">
+        <div class="resume__left">
+          <section class="home" id="home">
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <div class="home__img-container">
+                  <img src="./icons/foto.png" alt="" class="home__img" />
+                </div>
+                <h1 class="home__title">Juan Deossa</h1>
+                <h3 class="home__profession">Frontend Developer</h3>
+                <div>
+                  <a
+                    download=""
+                    href="./pdf/ResumeCV.pdf"
+                    class="home__button-movil"
+                    >Download</a
+                  >
+                </div>
+              </div>
+              <div class="home__address bd-grid">
+                <span class="home__information">
+                  <i class="bx bx-map home__icon"></i> Colombia
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-envelope home__icon"></i>
+                  juandeossa.nc@gmail.com
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-phone home__icon"></i> +57 3108476292
+                </span>
+              </div>
+            </div>
+            <!-- Dark-theme -->
+            <i
+              class="bx bx-moon change-theme"
+              title="Theme"
+              id="theme-button"
+            ></i>
+            <!-- Download -->
+            <i
+              class="bx bx-download generate-pdf"
+              title="Generate PDF"
+              id="resume-button"
+            ></i>
+          </section>
+
+          <section class="social section">
+            <h2 class="section-title">Social</h2>
+            <div class="social__container bd-grid">
+              <a
+                href="https://www.linkedin.com/in/juan-ricardo-deossa-morales-7b2468249/"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-linkedin-square social__icon"></i> @JuanDeossa
+              </a>
+              <a
+                href="https://github.com/JuanDeossa"
+                target="_blank"
+                class="social__link"
+              >
+                <i class="bx bxl-github social__icon"></i> @JuanDeossa
+              </a>
+            </div>
+          </section>
+
+          <section class="profile section" id="profile">
+            <h2 class="section-title">Perfil</h2>
+            <p class="profile__description">
+              Soy desarrollador Frontend e ingeniero mecánico con gran interés
+              en la programacion de software en general y el Desarrollo web
+              utilizando Javascript y React. Me considero una persona
+              autodidacta y comprometida con mi trabajo, cuento con experiencia
+              trabajando en equipo y logrando objetivos planteados al iniciar un
+              proyecto.
+            </p>
+          </section>
+
+          <section class="education section" id="education">
+            <h2 class="section-title">Educación</h2>
+            <div class="education__container bd-grid">
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <span class="education__line"></span>
+                </div>
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">Frontend development</h3>
+                  <span class="education__studies">Platzi</span>
+                  <span class="education__year"
+                    >Abril de 2022 - actualidad</span
+                  >
+                </div>
+              </div>
+              <div class="education__content">
+                <div class="education__time">
+                  <span class="education__rounder"></span>
+                  <!-- <span class="education__line"></span> -->
+                </div>
+                <div class="education__data bd-grid">
+                  <h3 class="education__title">Ingeniero mecánico</h3>
+                  <span class="education__studies"
+                    >Universidad de Antioquia</span
+                  >
+                  <span class="education__year">2015 - 2022</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="skills section" id="skills">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills__content bd-grid">
+              <ul class="skills__data">
+                <li class="skills__name">
+                  <span class="skills__circle"></span> React
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> JavaScript
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> HTML5
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> CSS3
+                </li>
+              </ul>
+              <ul class="skills__data">
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Bootstrap
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Tailwind
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Material UI
+                </li>
+                <li class="skills__name">
+                  <span class="skills__circle"></span> Git &amp; GitHub
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="resume__right">
+          <section class="experience section" id="experience">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience__container bd-grid">
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">Desarrollador Frontend</h3>
+                  <span class="experience__company"
+                    >Desde agosto de 2022 - actualidad | Freelance</span
+                  >
+                  <p class="experience__description">
+                    Desarrollo de paginas web estáticas
+                  </p>
+                </div>
+              </div>
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <span class="experience__line"></span>
+                </div>
+                <div class="experience__data bd-grid">
+                  <h3 class="experience__title">
+                    Lider de proyectos de ingeniera
+                  </h3>
+                  <span class="experience__company"
+                    >Desde abirl de 2021 hasta junio de 2022 | Meiker
+                    S.A.S.</span
+                  >
+                  <p class="experience__description">
+                    Planeacion y ejecucion de proyectos de ingenieria Mecanica,
+                    automatizacion de plantillas de diseño 3D de estructuras
+                    metalicas utilizando Autodesk Inventor y Visual Basic
+                  </p>
+                </div>
+              </div>
+              <div class="experience__content">
+                <div class="experience__time">
+                  <span class="experience__rounder"></span>
+                  <!-- <span class="experience__line"></span> -->
+                </div>
+                <div class="experience__data bd-grid">
+                  <!-- <h3 class="experience__title">
+                    Participante en semillero de mecatrónica
+                  </h3>
+                  <span class="experience__company"
+                    >Desde 2020 hasta 2021 | Universidad de Antioquia</span
+                  >
+                  <p class="experience__description">
+                    Participante activo en el semillero de mecatrónica en sus
+                    líneas de investigación (Mecatrónica, Control automático,
+                    Industria 4.0).
+                  </p> -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="certificate section" id="certificates">
+            <h2 class="section-title">Certificados</h2>
+            <div class="certificate__container bd-grid">
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    React: basico, intermedio y avanzado
+                  </h3>
+                </div>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">React: Hooks</h3>
+                </div>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    React: Navegacion con react router
+                  </h3>
+                </div>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    React: Manejo del estado con Redux y Redux Toolkit
+                  </h3>
+                </div>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    React: Manejo de estilos con Material UI y Tailwind
+                  </h3>
+                </div>
+              </div>
+              <!--  -->
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    Curso Profesional de Git y GitHub
+                  </h3>
+                </div>
+              </div>
+              <!--  -->
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    Curso Definitivo de HTML y CSS
+                  </h3>
+                  <!-- <p class="certificate__description">Control de Versiones en tus Proyectos con Git; Trabajar en Equipos de Forma Colaborativa</p> -->
+                </div>
+              </div>
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                  <span class="certificate__line"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    JavaScript: Curso profesional y creacion de SPA
+                  </h3>
+                  <!-- <p class="certificate__description">Control de Versiones en tus Proyectos con Git; Trabajar en Equipos de Forma Colaborativa</p> -->
+                </div>
+              </div>
+              <div class="certificate__content">
+                <div class="certificate__time">
+                  <span class="certificate__rounder"></span>
+                </div>
+                <div class="certificate__data bd-grid">
+                  <h3 class="certificate__title">
+                    JavaScript: Consumo de API REST con fetch y axios
+                  </h3>
+                  <!-- <p class="certificate__description">Control de Versiones en tus Proyectos con Git; Trabajar en Equipos de Forma Colaborativa</p> -->
+                </div>
+              </div>
+
+              <!-- <div class="certificate__content">
+                            <h3 class="certificate__title">Curso de Introducción a React.js</h3>
+                            <p class="certificate__description">Aprendizaje de como consumir una API REST con JavaScript; Establecer el flujo de comunicación entre Frontend y Backend ademas de solicitudes asíncronas usando fetch.</p>
+                        </div> -->
+            </div>
+          </section>
+
+          <section class="references section" id="references">
+            <h2 class="section-title">Referencias</h2>
+            <div class="references__container bd-grid">
+              <div class="references__content bd-grid">
+                <span class="references__subtitle">Frontend developer</span>
+                <h3 class="references__title">Daniel Fernando Vera</h3>
+                <ul class="references__contact">
+                  <li>Phone: +57 3214409451</li>
+                  <li>Email: d.vera.acero@gmail.com</li>
+                </ul>
+              </div>
+              <div class="references__content bd-grid">
+                <span class="references__subtitle"
+                  >Instructor de desarrollo de software y proyectos scrum</span
+                >
+                <h3 class="references__title">Simon Restrepo</h3>
+                <ul class="references__contact">
+                  <li>Phone: +57 3205948110</li>
+                  <li>Email: srestrepo@sena.edu.co</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="languages section">
+            <h2 class="section-title">Idiomas</h2>
+            <div class="languages__container">
+              <ul class="languages__content bd-grid">
+                <li class="languages__name">
+                  <span class="languages__circle"></span> Español (Nativo)
+                </li>
+                <li class="languages__name">
+                  <span class="languages__circle"></span> Ingles (B2)
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="interests section">
+            <h2 class="section-title">Intereses</h2>
+            <div class="interests__container bd-grid">
+              <div class="interests__content">
+                <i class="bx bx-bot interests__icon"></i>
+                <span class="interests__name">Tecnologia</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-terminal interests__icon"></i>
+                <span class="interests__name">Desarrollo web</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-headphone interests__icon"></i>
+                <span class="interests__name">Musica</span>
+              </div>
+              <div class="interests__content">
+                <i class="bx bx-game interests__icon"></i>
+                <span class="interests__name">Videojuegos</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <a href="#" class="scrolltop show-scroll" id="scroll-top">
+      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
+
+    <script src="./html2pdf.bundle.min.js"></script>
+
+    <script src="./main.js"></script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
